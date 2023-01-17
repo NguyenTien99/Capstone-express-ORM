@@ -2,28 +2,23 @@ const { Sequelize } = require("sequelize");
 const configs = require("../config");
 
 
-// const sequelize = new Sequelize("node26-images","root","1234", {
+// const sequelize = new Sequelize("capstone-orm-image","root","1234", {
 //     dialect: "mysql",
 //     host: "localhost",
 //     port: 3306,
 // });
 
-const sequelize = new Sequelize("test","root","1234", {
-  dialect: "mysql",
-  host: "localhost",
-  port: 3306,
-});
 
-// const sequelize = new Sequelize(
-//   configs.DB_NAME,
-//   configs.DB_USER,
-//   configs.DB_PASSWORD,
-//   {
-//     dialect: configs.DB_DIALECT,
-//     host: configs.DB_HOST,
-//     port: configs.DB_PORT,
-//   }
-// );
+const sequelize = new Sequelize(
+  configs.DB_NAME,
+  configs.DB_USER,
+  configs.DB_PASSWORD,
+  {
+    dialect: configs.DB_DIALECT,
+    host: configs.DB_HOST,
+    port: configs.DB_PORT,
+  }
+);
 
 (async () => {
   try {
