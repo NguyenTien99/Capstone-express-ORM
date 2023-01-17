@@ -38,7 +38,7 @@ module.exports = (sequelize) => {
         type: DataTypes.INTEGER,
       },
       avatar: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
       },
     },
     {

@@ -32,9 +32,9 @@ const uploadAvatar = async(userId,url) => {
         if(!user){
             throw new AppError(400, "User not found");
         }
-        const data = {...user, avatar: url};
+        console.log(user.dataValues)
         
-        await User.update({...user, avatar},{ where: { userId } });
+        await User.update({...user, avatar: url},{ where: { userId } });
         
     } catch (error) {
         throw error

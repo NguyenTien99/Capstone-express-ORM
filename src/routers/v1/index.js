@@ -16,7 +16,7 @@ v1.get("/profile", authorization, authController.getProfile());
 
 // User
 v1.get("/user/:userId", authorization, userController.getUserById());
-v1.put("/user/:userId", userController.updateUser());
+v1.put("/user/:userId", authorization, userController.updateUser());
 v1.post(
   "/user/uploadAvatar/:userId",
   upload.single("file"),
@@ -58,6 +58,6 @@ v1.post("/comments", authorization, commentController.createComment());
 // Saved
 v1.get("/saved/image/:imageId", authorization, savedController.getSavedImage());
 v1.get("/saved/user/:userId", authorization, savedController.getSavedByUser());
-v1.post("/saved/image/:imageId", savedController.postSaved());
+v1.post("/saved/image/:imageId",authorization, savedController.postSaved());
 
 module.exports = v1;
