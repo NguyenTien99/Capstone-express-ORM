@@ -7,7 +7,6 @@ COPY . .
 
 RUN npm install
 
-# RUN chmod +x wait-for
 
 EXPOSE 4000
 
