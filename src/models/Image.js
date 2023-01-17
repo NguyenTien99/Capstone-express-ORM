@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
   return sequelize.define(
-    "Img",
+    "Images",
     {
       imageId: {
         type: DataTypes.INTEGER,
@@ -27,7 +27,7 @@ module.exports = (sequelize) => {
       },
     },
     {
-      tableName: "img",
+      tableName: "images",
       timestamps: false,
     }
   );
